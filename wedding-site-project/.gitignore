@@ -1,0 +1,5 @@
+/bin/
+
+.project
+.settings/*
+resources/images/gallery/img*

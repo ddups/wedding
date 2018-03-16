@@ -1,0 +1,33 @@
+.navbar-header {
+  float: left;
+}
+
+.navbar-collapse {
+  float: right;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-family: 'Dancing Script', cursive;
+}
+
+.dropdown:hover {
+  background-color: #e7e7e7;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  width: 100%;
+  margin-top: 0;
+}
+
+.dropdown-toggle {
+  margin-bottom: 2px;
+}
+
+.navbar .dropdown-toggle, .nav-tabs .dropdown-toggle {
+  margin-bottom: 0;
+}
