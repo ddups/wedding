@@ -706,6 +706,11 @@ section {
   transform: scale(1.1);
 }
 
+.coming-soon {
+  display: flex;
+  justify-content: center;
+}
+
 .coming-soon-replace {
   padding: 100px;
   max-width: 60%;
