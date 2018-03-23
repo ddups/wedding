@@ -30,11 +30,13 @@ let $partiesMenu =
         .append($('<li/>')
                     .append($('<a/>')
                                 .attr('href', '#bridesmaids-groomsmen')
-                                .text('Bridesmaids')))
+                                .text('Bridesmaids')
+                                .addClass('gallery-button')))
         .append($('<li/>')
                     .append($('<a/>')
                                 .attr('href', '#bridesmaids-groomsmen')
-                                .text('Groomsmen')))
+                                .text('Groomsmen')
+                                .addClass('gallery-button')))
         .append($('<li/>')
                 .append($('<a/>')
                             .attr('href', '#mcs')
@@ -152,22 +154,27 @@ $(document).ready(function(){
         )
         
     $('.dropdown-menu li a').click(function(){
-        let flkty = $('#bio-gallery').data('flickity'); 
-        if ($(this).text() === 'Bridesmaids') {
-            if (flkty.selectedIndex !== 0) {
-                flkty.select(0);
-                changeBioText(flkty.getCellElements()[0]);
-            }
-        } else if ($(this).text() === 'Groomsmen') {
-            if (flkty.selectedIndex !== 1) {
-                flkty.select(1);
-                changeBioText(flkty.getCellElements()[7]);
+        if ($(this).hasClass('.gallery-button')) {
+            let flkty = $('#bio-gallery').data('flickity'); 
+            if ($(this).text() === 'Bridesmaids') {
+                if (flkty.selectedIndex !== 0) {
+                    flkty.select(0);
+                    changeBioText(flkty.getCellElements()[0]);
+                }
+            } else if ($(this).text() === 'Groomsmen') {
+                if (flkty.selectedIndex !== 1) {
+                    flkty.select(1);
+                    changeBioText(flkty.getCellElements()[7]);
+                }
             }
         }
         
         $('html, body').animate({
             scrollTop: $( $(this).attr('href') ).offset().top
         }, 500);
-        return false;
+    });
+    
+    $('.navbar-brand').click(function(){
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
     });
 });
