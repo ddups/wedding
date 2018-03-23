@@ -118,8 +118,10 @@ $(document).ready(function(){
             .addClass('bridesmaid-select')
             .text('Bridesmaids')
             .on('click', function (){
-                bioFlkty.select(0);
-                changeBioText(bioFlkty.getCellElements()[0]);
+                if (bioFlkty.selectedIndex !== 0) {
+                    bioFlkty.select(0);
+                    changeBioText(bioFlkty.getCellElements()[0]);
+                }
             })
     );
     $dots.after(
@@ -127,8 +129,10 @@ $(document).ready(function(){
             .addClass('groomsmen-select')
             .text('Groomsmen')
             .on('click', function (){
-                bioFlkty.select(1);
-                changeBioText(bioFlkty.getCellElements()[7]);
+                if (bioFlkty.selectedIndex !== 1) {
+                    bioFlkty.select(1);
+                    changeBioText(bioFlkty.getCellElements()[7]);
+                }
             })
     );
     

@@ -154,11 +154,15 @@ $(document).ready(function(){
     $('.dropdown-menu li a').click(function(){
         let flkty = $('#bio-gallery').data('flickity'); 
         if ($(this).text() === 'Bridesmaids') {
-            flkty.select(0);
-            changeBioText(flkty.getCellElements()[0]);
+            if (flkty.selectedIndex !== 0) {
+                flkty.select(0);
+                changeBioText(flkty.getCellElements()[0]);
+            }
         } else if ($(this).text() === 'Groomsmen') {
-            flkty.select(1);
-            changeBioText(flkty.getCellElements()[7]);
+            if (flkty.selectedIndex !== 1) {
+                flkty.select(1);
+                changeBioText(flkty.getCellElements()[7]);
+            }
         }
         
         $('html, body').animate({
