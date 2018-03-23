@@ -1,5 +1,44 @@
 // GALLERY
 $(document).ready(function(){
+    (function comingSoon(run) {
+        if (!run) return;
+        // if a div is given the class '.coming-soon' this should find it, clear it out, and replace it with a fancy banner
+        $.each($('.coming-soon'), function (i, x) {
+            $(x).empty();
+            
+            if ($(x).attr('id') !== 'contact') {
+                $(x).append(
+                    $('<div/>')
+                        .addClass('coming-soon-replace')
+                        .addClass('bio-display')
+                        .append($('<h1/>').text('More Information Coming Soon!'))
+                )
+            }
+        });
+    })(1);
+    
+    (function test() { // YOU ARE AN IDIOT
+        let arr = new Array(100).map(function (x, i) { return i });
+        let count = 0;
+        try {
+            arr.map(function(x, i) {
+                count++;
+                console.log(count++);
+                let suffix;
+                if (i === 0) {
+                    suffix = '.gif';
+                } else {
+                    suffix = '.jpg';
+                }
+
+                // put the code you wanna do in here and then catch a failure to exit cleanly
+                $.get('resources/images/gallery/img (' + i + ')' + suffix);
+            })
+        } catch(err) {
+            alert('caught the OOB');
+        }
+    });
+    
     (function initGalleryThumbnails(numImages) {
         let srcBase = 'resources/images/gallery/';
         let $gallery = $('#gallery');

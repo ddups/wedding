@@ -40,9 +40,25 @@ $(document).ready(function(){
         }
         
         // init MC Gallery
-        let $mcGallery = $('.mc-container');
+        let $mcContainer = $('.mc-container');
         let src = srcBase + 'dan.jpg';
+        
+        $mcContainer.append(
+            $('<div/>')
+                .attr('id', 'mc-bio-display')
+                .addClass('bio-display')
+                .append(
+                    $('<h2/>')
+                        .attr('id', 'mc-bio-name'))
+                .append(                    
+                    $('<p/>')
+                        .attr('id', 'mc-bio-text'))
+        );
 
+        let $mcGallery = 
+            $('<div/>')
+                .addClass('mc-gallery');
+        
         $mcGallery.append(
             $('<div/>')
                 .addClass('bio-thumb')
@@ -57,18 +73,6 @@ $(document).ready(function(){
                 })
         )
         
-        $mcGallery.append(
-            $('<div/>')
-                .attr('id', 'mc-bio-display')
-                .addClass('bio-display')
-                .append(
-                    $('<h2/>')
-                        .attr('id', 'mc-bio-name'))
-                .append(                    
-                    $('<p/>')
-                        .attr('id', 'mc-bio-text'))
-        )
-
         src = srcBase + 'lydia.png';
         $mcGallery.append(
             $('<div/>')
@@ -83,6 +87,7 @@ $(document).ready(function(){
                     }
                 })
         )
+        $mcContainer.append($mcGallery);
     })();
     
     let $bioGallery = $('#bio-gallery');
@@ -135,7 +140,7 @@ $(document).ready(function(){
     
     // need to keep bio text hidden until now, then display rachel as default
     changeBioText(bioFlkty.getCellElements()[0]);
-    changeBioText($('.mc-container').children('div').first(), true);
+    changeBioText($('.mc-gallery').children('div').first(), true);
     
 });
 

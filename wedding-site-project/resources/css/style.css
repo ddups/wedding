@@ -92,7 +92,7 @@ section {
 .hero-title {
   color: #fff;
   font-family: 'Dancing Script', cursive;
-  font-size: 90pt;
+  font-size: 120px;
   font-weight: 700;
   margin-bottom: 70px;
   position: relative;
@@ -123,7 +123,7 @@ section {
 
 .hero-subtitle {
   color: #fff;
-  font-size: 58pt;
+  font-size: 78px;
   font-family: 'Open Sans Condensed', sans-serif;
   min-height: 55px;
   text-transform: uppercase;
@@ -311,7 +311,7 @@ section {
   height: 100%;
   width: 100%;
   padding: 0;
-  max-width: none;
+  max-width: 1200px;
   -webkit-backface-visibility: hidden
 }
 
@@ -356,8 +356,8 @@ section {
 
 .quote-fullwidth {
   background-image: url(../images/rings.jpg);
-  font-size: 38pt;
-  line-height: 38pt;
+  font-size: 51px;
+  line-height: 51px;
   padding: 100px 0;
   text-align: center;
   color: #fff;
@@ -383,7 +383,7 @@ section {
 
 /* ****GALLERY**** */
 .gallery-display {
-  width: 65%;
+  width: 85%;
 }
 
 #gallery {
@@ -430,16 +430,17 @@ section {
   width: 100%;
 }
 
-.mc-container {
+.mc-gallery {
+  flex-direction: row;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ad9fb3;
-  background-image: url(../images/pattern.png);
+  justify-content: space-evenly;
 }
 
-.mc-container .bio-display {
-  width: 68%;
+.mc-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .bio-text {
@@ -703,4 +704,20 @@ section {
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+.coming-soon-replace {
+  padding: 100px;
+  max-width: 60%;
+  text-align: center;
+}
+
+.coming-soon-replace>h1 {
+  color: #003366;
+  margin: 0;
+  font-weight: bold;
+}
+
+.container .coming-soon-replace {
+  max-width: 100%;
 }
