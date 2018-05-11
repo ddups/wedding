@@ -9,24 +9,761 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- CSS -->
+<!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="resources/css/main.css">
-<link rel="stylesheet" href="resources/css/warped.css">
-<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Crafty+Girls:regular:latin'>
+<link rel="stylesheet" href="resources/css/navigation.css">
+<link rel="stylesheet" href="resources/css/flickity.css">
+<link rel="stylesheet" href="resources/css/style.css">
+<link rel="stylesheet" href="resources/css/timeline.css">
 
+
+<!-- FONTS -->
+<link rel='stylesheet' type='text/css'
+    href='http://fonts.googleapis.com/css?family=Crafty+Girls:regular:latin'
+>
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+<link
+    href='http://fonts.googleapis.com/css?family=Dancing+Script:700%7COpen+Sans%7COpen+Sans+Condensed:300'
+    rel='stylesheet' type='text/css'
+>
+
+<!-- JAVASCRIPT -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="resources/js/header.js"></script>
+<!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="resources/js/vendors/flickity.pkgd.min.js"></script>
+<script src="resources/js/vendors/freewall.js"></script>
+<script src="resources/js/vendors/arctext.js"></script>
 <script src="resources/js/scripts.js"></script>
-<script src="resources/js/bootstrap-nav.js"></script>
+<script src="resources/js/gallery.js"></script>
+<script src="resources/js/bio-gallery.js"></script>
+<script src="resources/js/navigation.js"></script>
+<script src="resources/js/rsvp.js"></script>
+<script src="resources/js/timeline.js"></script>
 </head>
 
 <body id="body">
-    <nav id="navbar" class="navbar navbar-default navbar-fixed-top"></nav>
-    <header id="header"></header>
+    <div id="wrapper">
+        <!-- BEGIN NAVIGATION SECTION -->
+        <header id="header">
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed"
+                                    data-toggle="collapse"
+                                    data-target="#navbar"
+                                    aria-expanded="false"
+                                >
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="#"> <span
+                                        class="glyphicon glyphicon-heart" aria-hidden="true"
+                                    ></span>Emma and Derek
+                                </a>
+                            </div>
 
-    <div class="container-fluid main-content">
-        <img src="resources/images/luau.jpg" class="home-image">
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="navbar"></div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- END NAVIGATION SECTION -->
+
+        <!-- BEGIN HOME SECTION -->
+        <section id="home" class="home divider-bottom-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="hero-title curve">Emma &amp; Derek</div>
+                        <div class="hero-divider"></div>
+                        <div class="hero-subtitle curve2">15 September 2018</div>
+                    </div>
+                </div>
+            </div>
+            <div id="freewall" class="free-wall"></div>
+        </section>
+        <!-- END HOME SECTION -->
+
+        <!-- BEGIN OUR STORY SECTION -->
+        <section id="our-story">
+            <div class="container">
+                <h1 class="section-title padding-top-1em">This is our story...</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non porttitor
+                    magna, id ultricies dolor. Donec sodales lorem non enim pretium laoreet et non
+                    enim. Nam volutpat vehicula rutrum. Duis risus purus, aliquam id lorem sodales,
+                    porttitor porttitor neque. Donec condimentum tortor ac elit scelerisque, quis
+                    tristique orci faucibus. Proin ac suscipit magna, eu faucibus eros. Donec
+                    tincidunt, nunc vel fringilla fringilla, massa magna egestas nisl, sed efficitur
+                    odio metus a tortor. Proin diam tortor, finibus eu orci quis, porta dignissim
+                    eros. Curabitur vel blandit nisl, nec condimentum arcu.</p>
+                <p>Pellentesque aliquet dolor nunc, at congue neque lacinia a. Pellentesque
+                    commodo finibus ipsum, vel laoreet leo dictum sodales. Vestibulum lobortis diam
+                    risus, non fringilla nisl ultrices vel. Suspendisse potenti. Donec commodo massa
+                    non suscipit viverra. Sed suscipit mauris est, ut rhoncus nisl tempor sed. Nam
+                    neque felis, congue vestibulum interdum tristique, finibus quis turpis. Morbi
+                    suscipit urna dui, ut efficitur odio sollicitudin pulvinar. Proin quis elementum
+                    ex. In nec ullamcorper metus. Morbi ac tincidunt nisi. Ut sit amet maximus erat.
+                    Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla diam arcu,
+                    tincidunt non nisl sit amet, finibus scelerisque lorem. Duis imperdiet rutrum
+                    massa sed convallis. Sed accumsan libero sem, et mattis felis rhoncus eu.
+                    Curabitur pharetra, libero a pretium semper, purus turpis suscipit risus, et
+                    sodales augue elit et tortor. Etiam auctor orci vel tortor accumsan, nec
+                    vestibulum ante elementum. Nulla nec magna felis. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Fusce mattis urna at fringilla semper. Praesent
+                    gravida malesuada luctus. Morbi maximus ullamcorper turpis a eleifend. Proin
+                    dapibus ornare tellus eu volutpat. Quisque faucibus ex justo. Pellentesque
+                    elementum diam nec est molestie, ut semper nisl malesuada. Curabitur odio
+                    ligula, cursus et arcu eget, dictum dictum lacus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non porttitor
+                    magna, id ultricies dolor. Donec sodales lorem non enim pretium laoreet et non
+                    enim. Nam volutpat vehicula rutrum. Duis risus purus, aliquam id lorem sodales,
+                    porttitor porttitor neque. Donec condimentum tortor ac elit scelerisque, quis
+                    tristique orci faucibus. Proin ac suscipit magna, eu faucibus eros. Donec
+                    tincidunt, nunc vel fringilla fringilla, massa magna egestas nisl, sed efficitur
+                    odio metus a tortor. Proin diam tortor, finibus eu orci quis, porta dignissim
+                    eros. Curabitur vel blandit nisl, nec condimentum arcu.</p>
+            </div>
+        </section>
+        <!-- END OUR STORY SECTION -->
+
+        <!-- BEGIN QUOTE SECTION -->
+        <section class="parallax quote-fullwidth bg-color-overlay"
+            data-stellar-background-ratio="0.5"
+        >
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">I would rather share one lifetime with you than
+                        face all the ages of this world alone</div>
+                </div>
+            </div>
+        </section>
+        <!-- END QUOTE SECTION -->
+
+        <!-- BEGIN GALLERY SECTION -->
+        <section id="photo-gallery" class="divider-bottom-2 divider-pattern divider-bg-color">
+            <div class="container">
+                <h1 class="section-title padding-top-1em">Photo Gallery</h1>
+                <div id="gallery-display" class="gallery-display block-center">
+                    <img id="gallery-image" class="gallery-image">
+                </div>
+                <div class="slideshow-controls"></div>
+                <div id="gallery" class="block-center"></div>
+            </div>
+        </section>
+        <!-- END GALLERY SECTION -->
+
+        <!-- BEGIN WEDDING DETAILS SECTION -->
+        <section id="the-wedding" class="bg-color pattern divider-bottom-1">
+            <div class="container-fluid">
+                <div class="container">
+                    <h1 class="section-title section-title-white padding-top-1em">A Weekend of
+                        Fun</h1>
+                </div>
+
+                <div class="two-columns coming-soon">
+                    <div class="left-column">
+                        <div id="what-to-bring" class="top-left">
+                            <h2>What to Bring</h2>
+                            <ul>
+                                <li>Item</li>
+                                <li>Item</li>
+                                <li>Item</li>
+                                <li>Item</li>
+                                <li>Item</li>
+                                <li>Item</li>
+                                <li>Item</li>
+                                <li>Item</li>
+                            </ul>
+                        </div>
+                        <div id="important-notes" class="btm-left">
+                            <h2>Important Notes</h2>
+                            <ul>
+                                <li>Item</li>
+                                <li>Item</li>
+                                <li>Item</li>
+                                <li>Item</li>
+                                <li>Item</li>
+                                <li>Item</li>
+                                <li>Item</li>
+                                <li>Item</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="right-column">
+                        <div>
+                            <!-- this creates the double border -->
+                            <div class="day-box">
+                                <!-- Friday schedule -->
+                                <div id="fri-timeline" class="cd-horizontal-timeline">
+                                    <h2>Friday</h2>
+                                    <div class="timeline">
+                                        <div class="events-wrapper">
+                                            <div class="events">
+                                                <ol>
+                                                    <li><a href="#" data-event-id="fri-1"
+                                                        class="time-selected"
+                                                    >4:00 pm</a></li>
+                                                    <li><a href="#" data-event-id="fri-2">7:00
+                                                            pm</a></li>
+                                                    <li><a href="#" data-event-id="fri-3">9:00
+                                                            pm</a></li>
+                                                </ol>
+
+                                                <span class="filling-line" aria-hidden="true"></span>
+                                            </div>
+                                            <!-- .events -->
+                                        </div>
+                                        <!-- .events-wrapper -->
+
+                                        <ul class="cd-timeline-navigation">
+                                            <li><a href="" class="prev inactive"><span
+                                                        class="left-arrow glyphicon glyphicon-chevron-left"
+                                                    ></span></a></li>
+                                            <li><a href="" class="next"><span
+                                                        class="right-arrow glyphicon glyphicon-chevron-right"
+                                                    ></span></a></li>
+                                        </ul>
+                                        <!-- .cd-timeline-navigation -->
+                                    </div>
+                                    <!-- .timeline -->
+
+                                    <div class="events-content">
+                                        <ol>
+                                            <li class="time-selected" data-event-id="fri1"><em>Open
+                                                    Check-In</em>
+                                                <p>Stop by the main office any time after 4 pm
+                                                    and grab your info bag. This will contain a map
+                                                    of the camp, as well as some other information
+                                                    that will also be listed on the bulletin board.
+                                                    Find your cabin and get yourself settled, and
+                                                    then the camp is yours to explore!</p></li>
+
+                                            <li data-event-id="fri-2"><em>L'Après Dîner</em>
+                                                <p>Join us in the Rec Center after the rehearsal
+                                                    dinner for drinks, dancing, and mingling! This
+                                                    will be super casual so feel free to make your
+                                                    own plans for dinner and show up whenever.</p></li>
+
+                                            <li data-event-id="fri-3"><em>S'mores and
+                                                    Ghost Stories</em>
+                                                <p>Head over to the boy's quad and grab a spot
+                                                    by the fire pit. Kick back and relax, enjoy some
+                                                    toasty treats, and swap stories with old friends
+                                                    and new ones.</p></li>
+                                        </ol>
+                                    </div>
+                                    <!-- .events-content -->
+                                </div>
+                            </div>
+                            <!-- END Friday Schedule -->
+
+                            <div class="day-box">
+                                <!-- Saturday Schedule -->
+                                <div id="sat-timeline" class="cd-horizontal-timeline">
+                                    <h2>Saturday</h2>
+                                    <div class="timeline">
+                                        <div class="events-wrapper">
+                                            <div class="events">
+                                                <ol>
+                                                    <li><a href="#" data-event-id="sat-1"
+                                                        class="time-selected"
+                                                    >9:30 am</a></li>
+                                                    <li><a href="#" data-event-id="sat-2">11:00
+                                                            am</a></li>
+                                                    <li><a href="#" data-event-id="sat-3">12:00
+                                                            pm</a></li>
+                                                    <li><a href="#" data-event-id="sat-4">2:00
+                                                            pm</a></li>
+                                                    <li><a href="#" data-event-id="sat-5">3:45
+                                                            pm</a></li>
+                                                    <li><a href="#" data-event-id="sat-6">4:45
+                                                            pm</a></li>
+                                                    <li><a href="#" data-event-id="sat-7">5:45
+                                                            pm</a></li>
+                                                    <li><a href="#" data-event-id="sat-8">7:30
+                                                            pm</a></li>
+                                                    <li><a href="#" data-event-id="sat-9">10:30
+                                                            pm</a></li>
+                                                </ol>
+
+                                                <span class="filling-line" aria-hidden="true"></span>
+                                            </div>
+                                            <!-- .events -->
+                                        </div>
+                                        <!-- .events-wrapper -->
+
+                                        <ul class="cd-timeline-navigation">
+                                            <li><a href="" class="prev inactive"><span
+                                                        class="left-arrow glyphicon glyphicon-chevron-left"
+                                                    ></span></a></li>
+                                            <li><a href="" class="next"><span
+                                                        class="right-arrow glyphicon glyphicon-chevron-right"
+                                                    ></span></a></li>
+                                        </ul>
+                                        <!-- .cd-timeline-navigation -->
+                                    </div>
+                                    <!-- .timeline -->
+
+                                    <div class="events-content">
+                                        <ol>
+                                            <li class="time-selected" data-event-id="sat-1"><em>Brunch</em>
+                                                <p>Brunch at the rec hall. Have some breakfast
+                                                    and experiment at the mimosa bar!</p></li>
+
+                                            <li data-event-id="sat-2"><em>Pickup Ultimate</em>
+                                                <p>Pick-up Ultimate game in the boy's quad.
+                                                    Everyone is encouraged to come play or watch.</p></li>
+
+                                            <li data-event-id="sat-3"><em>Open Camp</em>
+                                                <p>Open camp!! Go canoeing, play some disc golf
+                                                    or any of the other games and activities.</p></li>
+
+                                            <li data-event-id="sat-4"><em>Dress to Impress</em>
+                                                <p>Time to get ready and head to the Rec Hall
+                                                    lawn for some pre-freshments, then hit the
+                                                    beach.</p></li>
+
+                                            <li data-event-id="sat-5"><em>WE GET MARRIED!!</em>
+                                                <p>Make sure to bring your sunglasses, cameras,
+                                                    and some tissues!</p></li>
+
+                                            <li data-event-id="sat-6"><em>Cocktail Hour</em>
+                                                <p>Meet up on the Rec Hall lawn for appetizers,
+                                                    drinks, and a chance to chat with the
+                                                    newly-weds.</p></li>
+
+                                            <li data-event-id="sat-7"><em>Dinner is Served</em>
+                                                <p>We will start with wedding party
+                                                    introductions, dance for the first time as a
+                                                    married couple, and listen to some people sing
+                                                    our praises. Then we will get to the real reason
+                                                    you came... the dinner buffet!</p></li>
+
+                                            <li data-event-id="sat-8"><em>Dance Dance
+                                                    Revolution</em>
+                                                <p>Time to put on your dancing shoes, grab a
+                                                    partner, and groove the night away.</p></li>
+
+                                            <li data-event-id="sat-9"><em>Post-Nuptual
+                                                    Party Time!</em>
+                                                <p>Come to a bon fire in the woods or crank up
+                                                    your own music and feel free to keep the party
+                                                    rocking all night!</p></li>
+                                        </ol>
+                                    </div>
+                                    <!-- .events-content -->
+                                </div>
+                            </div>
+                            <!-- END Saturday Schedule -->
+
+                            <div class="day-box">
+                                <!-- Sunday Schedule -->
+                                <div id="sun-timeline" class="cd-horizontal-timeline">
+                                    <h2>Sunday</h2>
+                                    <div class="timeline">
+                                        <div class="events-wrapper">
+                                            <div class="events">
+                                                <ol>
+                                                    <li><a href="#" data-event-id="sun-1"
+                                                        class="time-selected"
+                                                    >8:30 am</a></li>
+                                                    <li><a href="#" data-event-id="sun-2">10:00
+                                                            am</a></li>
+                                                    <li><a href="#" data-event-id="sun-3">12:00
+                                                            pm</a></li>
+                                                </ol>
+
+                                                <span class="filling-line" aria-hidden="true"></span>
+                                            </div>
+                                            <!-- .events -->
+                                        </div>
+                                        <!-- .events-wrapper -->
+
+                                        <ul class="cd-timeline-navigation">
+                                            <li><a href="" class="prev inactive"><span
+                                                        class="left-arrow glyphicon glyphicon-chevron-left"
+                                                    ></span></a></li>
+                                            <li><a href="" class="next"><span
+                                                        class="right-arrow glyphicon glyphicon-chevron-right"
+                                                    ></span></a></li>
+                                        </ul>
+                                        <!-- .cd-timeline-navigation -->
+                                    </div>
+                                    <!-- .timeline -->
+
+                                    <div class="events-content">
+                                        <ol>
+                                            <li class="time-selected" data-event-id="sun-1"><em>Hangover
+                                                    Helper</em>
+                                                <p>Cure your hangover with bacon and eggs! And a
+                                                    little hair of the dog, of course...</p></li>
+
+                                            <li data-event-id="sun-2"><em>Clean Up, Clean
+                                                    Up...</em>
+                                                <p>We hate to ask it, but there will be a lot of
+                                                    work to do to get the camp cleaned up. If you
+                                                    could spare at least a little of your time and
+                                                    help us, it would be the best wedding gift of
+                                                    all (other than large sums of cash)</p></li>
+
+                                            <li data-event-id="sun-3"><em>That's a Wrap
+                                                    Folks!</em>
+                                                <p>Time to pack up and ship out... the party is
+                                                    over. We hope that you will be leaving with sore
+                                                    legs, some great memories, and at least some
+                                                    your dignity still intact!</p></li>
+                                        </ol>
+                                    </div>
+                                    <!-- .events-content -->
+                                </div>
+                            </div>
+                            <!-- END Sunday Schedule -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END WEDDING DETAILS SECTION -->
+
+        <!-- BEGIN VENUE SECTION -->
+        <section id="venue" class="">
+            <div class="container">
+                <h1 class="section-title padding-top-1em">The Venue</h1>
+                <img src="resources/images/camp-cody/aerial-1-1920x533.jpg">
+                <p></p>
+                <p>Camp Cody is located on the shores of Ossipee Lake — two hours north of
+                    Boston. If you use your GPS, you may end up being directed to the second
+                    driveway, so when you get onto Ossipee Lake Rd keep your eyes open for the
+                    balloons and signs and take a right down the first driveway.</p>
+                <p>Please plan on parking in the main lot when you arrive. If you are going to
+                    be staying the night, you can move to one of the other lots closer to your
+                    cabin. If you are going to be leaving at some point on Saturday you can remain
+                    parked in the main lot.</p>
+                <!-- API KEY AIzaSyB7VqycVSst6xsGOsbpgTpXAJESBrVKy-I -->
+                <iframe class="map"
+                    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJkYegvJ8Qs0wRNlkmMKc1RO4&key=AIzaSyB7VqycVSst6xsGOsbpgTpXAJESBrVKy-I"
+                > </iframe>
+            </div>
+        </section>
+        <!-- END VENUE SECTION -->
+
+        <!-- BEGIN ACCOMMODATIONS SECTION -->
+        <section id="accommodations" class="">
+            <div class="container">
+                <h1 class="section-title padding-top-1em">Accommodations</h1>
+                <img src="resources/images/camp-cody/cabins-3-1920x533.jpg" style="margin-bottom: 80px">
+            </div>
+            
+            <div class="container-fluid coming-soon"></div>
+        </section>
+        <!-- END ACCOMMODATIONS SECTION -->
+
+        <!-- BEGIN WEDDING PARTIES SECTION -->
+        <section id="bridesmaids-groomsmen"
+            class="divider-bottom-3 parallax bg-color-overlay wedding-parties"
+            data-stellar-background-ratio="0.5"
+        >
+            <div class="divider-top-1"></div>
+            <div class="container">
+                <h1 class="section-title section-title-white padding-top-1em">The Wedding
+                    Parties</h1>
+            </div>
+            <div class="container">
+                <div id="bio-display" class="bio-display">
+                    <h2 id="bio-name"></h2>
+                    <h3 id="bio-title"></h3>
+                    <p id="bio-text"></p>
+                </div>
+                <div id="bio-gallery" class="block-center"></div>
+            </div>
+            
+            <div id="mcs" class="container padding-top-1em">
+                <h1 class="section-title section-title-white padding-top-1em">Masters of the Ceremony</h1>
+                <div class="mc-container"></div>
+            </div>
+        </section>
+        <!-- END WEDDING PARTIES SECTION -->
+
+        <!-- BEGIN GIFTS SECTION -->
+        <section id="gifts" class="divider-top-up-angle">
+            <div class="container">
+                <h1 class="section-title padding-top-1em">Gifts</h1>
+                
+                <h2>Check out our gift registries at</h2>
+                <div class="flex-center wedding-gifts">
+                    <div class="bio-display">
+                        <a target="_blank" href="https://www.macys.com/wgl/registry/guest/6906444">
+                            <img src="resources/images/macys-large.png">
+                        </a>
+                    </div>
+                    <div class="bio-display">
+                        <a target="_blank" href="https://www.rei.com/GiftRegistryDetails/15280615">
+                            <img src="resources/images/rei.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END GIFTS SECTION -->
+
+        <!-- BEGIN RSVP SECTION -->
+        <section id="rsvp-contact" class="bg-color pattern">
+            <div class="divider-top-2 no-padding-bottom no-padding-top"></div>
+            
+            <div id="rsvp" class="container">
+                <h1 class="section-title section-title-white padding-top-1em">RSVP</h1>
+                <div class="coming-soon"></div>
+                <br> <br> <br> <br> <br> <br> <br> <br>
+            </div>
+            <div id="contact" class="container coming-soon">
+                <h1 class="section-title section-title-white padding-top-1em">Contact Us</h1>
+                <br> <br> <br> <br> <br> <br> <br> <br>
+			</div>
+			<div class="container rsvp-container">
+                <div id="form-rsvp">
+                    <div class="form-wrap">
+                        <section class="highlighted">
+                            <h3>Are you coming to the wedding?</h3>
+                            <div data-value="attending_wedding" class="radio-lilac col-sm-12">
+                                <button class="btn btn-default" data-value="yes">Yes</button>
+                                <button class="btn btn-default" data-value="no">No</button>
+                            </div>
+                        </section>
+                        <div class="attending" style="display: none;">
+                            Great to hear!
+                            <section>
+                                <div class="row align-middle">
+                                    <div class="col-lg-7">
+                                        <input type="text" name="Name" placeholder="YOUR NAME*" class="form-control required fromName">
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <div class="col-sm-8">
+                                            <label>How many nights are you staying?</label>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <input type="number" name="nights" min="0" max="2" value="0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-middle">
+                                    <div class="col-lg-7">
+                                        <input type="email" name="Email" placeholder="YOUR EMAIL*" class="form-control required fromEmail align-middle">
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <div class="col-sm-8">
+                                            <label class="align-middle">Will you be renting linens?</label>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <button class="btn btn-default linen-button align-middle" data-value="yes">Yes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <h3><i class="icon icon-arrow-right"></i>Planning on bringing any other guests?<i class="icon icon-arrow-left"></i></h3>
+                                <div class="col-md-8">
+                                    <input type="text" name="guest-name" id="guest-name" placeholder="GUEST NAME" class="form-control">
+                                    <label>Nights?<input type="number" name="guest-nights" id="guest-nights" class="form-control" min="0" max="2"></label>
+                                    <label>Linens?<input type="checkbox" name="guest-linens" id="guest-linens" class="form-control"></label>
+                                </div>
+                                <div class="col-md-4">
+                                    <button id="add_guest" class="btn btn-color add_button" data-input="guest" data-wrapper="guest_list">+ Add Guest</button>
+                                </div>
+                                <div id="guest_list" class="add_list col-md-12" data-count="2">
+                                </div>
+                            </section>
+                        </div>
+                        <section class="message-box highlighted" style="display: none;">
+                            <div class="col-sm-12">
+                                <textarea name="Message" placeholder="LEAVE A NOTE (OPTIONAL)" class="form-control"></textarea>
+                                <div class="form_status_message"></div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="center">
+                        <button type="submit" class="btn ribbon btn-color submit_form"><span class="line_above"></span><i class="icon icon-arrow-right"></i>Submit<i class="icon icon-arrow-left"></i></button>
+                    </div>
+                </div>
+            </div>
+            <!-- <form class="rsvp-form">
+				<div class="rsvp-col1">
+					<label for="rsvp-name">Name:</label>
+					<input type="text" name="rsvp-name">
+					<label for="rsvp-email">Email:</label>
+					<input type="text" name="rsvp-email">
+					<label for="rsvp-guests">Are you bringing anyone? (family/guest)</label>
+					<input type="textarea" name="rsvp-guests">
+				</div>
+				<div class="rsvp-col2">
+					<span>Are you staying at the camp?</span>
+					<label><input type="radio" name="rsvp-lodging">Yes</label>
+					<label><input type="radio" name="rsvp-lodging">No</label>
+					<span>How many nights?</span>
+					<label><input type="checkbox" name="rsvp-nights">Fri</label>
+					<label><input type="checkbox" name="rsvp-nights">Sat</label>
+					<span>Do you need to rent linens?</span>
+					<label><input type="checkbox" name="rsvp-nights">Fri</label>
+				</div>
+			</form> -->
+        </section>
+        <!-- END RSVP SECTION -->
     </div>
+
+
+
+
+
+
+    <!-- BEGIN BIO TEXT SECTION -- HIDDEN FROM USERS -->
+    <p id="rachel-bio" class="bio-text" data-full-name="Rachel Wojtasinski"
+        data-title="Matron of Honor"
+    >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non porttitor magna, id
+        ultricies dolor. Donec sodales lorem non enim pretium laoreet et non enim. Nam volutpat
+        vehicula rutrum. Duis risus purus, aliquam id lorem sodales, porttitor porttitor neque.
+        Donec condimentum tortor ac elit scelerisque, quis tristique orci faucibus. Proin ac
+        suscipit magna, eu faucibus eros. Donec tincidunt, nunc vel fringilla fringilla, massa magna
+        egestas nisl, sed efficitur odio metus a tortor. Proin diam tortor, finibus eu orci quis,
+        porta dignissim eros. Curabitur vel blandit nisl, nec condimentum arcu.</p>
+    <p id="maura-bio" class="bio-text" data-full-name="Maura Notini" data-title="Bridesmaid">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non porttitor magna, id
+        ultricies dolor. Donec sodales lorem non enim pretium laoreet et non enim. Nam volutpat
+        vehicula rutrum. Duis risus purus, aliquam id lorem sodales, porttitor porttitor neque.
+        Donec condimentum tortor ac elit scelerisque, quis tristique orci faucibus. Proin ac
+        suscipit magna, eu faucibus eros. Donec tincidunt, nunc vel fringilla fringilla, massa magna
+        egestas nisl, sed efficitur odio metus a tortor. Proin diam tortor, finibus eu orci quis,
+        porta dignissim eros. Curabitur vel blandit nisl, nec condimentum arcu.</p>
+    <p id="minta-bio" class="bio-text" data-full-name="Minta Notini" data-title="Bridesmaid">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non porttitor magna, id
+        ultricies dolor. Donec sodales lorem non enim pretium laoreet et non enim. Nam volutpat
+        vehicula rutrum. Duis risus purus, aliquam id lorem sodales, porttitor porttitor neque.
+        Donec condimentum tortor ac elit scelerisque, quis tristique orci faucibus. Proin ac
+        suscipit magna, eu faucibus eros. Donec tincidunt, nunc vel fringilla fringilla, massa magna
+        egestas nisl, sed efficitur odio metus a tortor. Proin diam tortor, finibus eu orci quis,
+        porta dignissim eros. Curabitur vel blandit nisl, nec condimentum arcu.</p>
+    <p id="andrea-bio" class="bio-text" data-full-name="Andrea Dow" data-title="Bridesmaid">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non porttitor magna, id
+        ultricies dolor. Donec sodales lorem non enim pretium laoreet et non enim. Nam volutpat
+        vehicula rutrum. Duis risus purus, aliquam id lorem sodales, porttitor porttitor neque.
+        Donec condimentum tortor ac elit scelerisque, quis tristique orci faucibus. Proin ac
+        suscipit magna, eu faucibus eros. Donec tincidunt, nunc vel fringilla fringilla, massa magna
+        egestas nisl, sed efficitur odio metus a tortor. Proin diam tortor, finibus eu orci quis,
+        porta dignissim eros. Curabitur vel blandit nisl, nec condimentum arcu.</p>
+    <p id="molly-bio" class="bio-text" data-full-name="Molly O'Riordan" data-title="Bridesmaid">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non porttitor magna, id
+        ultricies dolor. Donec sodales lorem non enim pretium laoreet et non enim. Nam volutpat
+        vehicula rutrum. Duis risus purus, aliquam id lorem sodales, porttitor porttitor neque.
+        Donec condimentum tortor ac elit scelerisque, quis tristique orci faucibus. Proin ac
+        suscipit magna, eu faucibus eros. Donec tincidunt, nunc vel fringilla fringilla, massa magna
+        egestas nisl, sed efficitur odio metus a tortor. Proin diam tortor, finibus eu orci quis,
+        porta dignissim eros. Curabitur vel blandit nisl, nec condimentum arcu.</p>
+    <p id="shelby-bio" class="bio-text" data-full-name="Shelby Jutras" data-title="Bridesmaid">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non porttitor magna, id
+        ultricies dolor. Donec sodales lorem non enim pretium laoreet et non enim. Nam volutpat
+        vehicula rutrum. Duis risus purus, aliquam id lorem sodales, porttitor porttitor neque.
+        Donec condimentum tortor ac elit scelerisque, quis tristique orci faucibus. Proin ac
+        suscipit magna, eu faucibus eros. Donec tincidunt, nunc vel fringilla fringilla, massa magna
+        egestas nisl, sed efficitur odio metus a tortor. Proin diam tortor, finibus eu orci quis,
+        porta dignissim eros. Curabitur vel blandit nisl, nec condimentum arcu.</p>
+    <p id="laura-bio" class="bio-text" data-full-name="Laura Birnbaum" data-title="Bridesmaid">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non porttitor magna, id
+        ultricies dolor. Donec sodales lorem non enim pretium laoreet et non enim. Nam volutpat
+        vehicula rutrum. Duis risus purus, aliquam id lorem sodales, porttitor porttitor neque.
+        Donec condimentum tortor ac elit scelerisque, quis tristique orci faucibus. Proin ac
+        suscipit magna, eu faucibus eros. Donec tincidunt, nunc vel fringilla fringilla, massa magna
+        egestas nisl, sed efficitur odio metus a tortor. Proin diam tortor, finibus eu orci quis,
+        porta dignissim eros. Curabitur vel blandit nisl, nec condimentum arcu.</p>
+
+
+    <p id="cj-bio" class="bio-text" data-full-name="CJ Dupuis" data-title="Best Man">The title
+        "Best Man" could not be more applicable to anyone that I know. For 27 years I have had the
+        pleasure -- and sometimes pain -- of having CJ as my brother. We have always had a strong
+        bond, even though growing up we were often on each other's nerves. I have witnessed CJ grow
+        into an amazing person and our friendship has only gotten stronger through the years. From
+        playing with our Lego "Buddies" to staying up late on Christmas playing our new video game,
+        we always had each other when there was no one else around. We have weathered many bad times
+        and enjoyed many good ones, and I could not ask for a better person to be by my side on my
+        wedding day.</p>
+    <p id="tyler-bio" class="bio-text" data-full-name="Tyler Leith" data-title="Groomsman">Tyler
+        is everything a man could ask for in a friend: trustworthy, dependable, honest... the list
+        goes on. My first memory of Tyler is from high school when he replaced Mr. Hill's eraser/rag
+        with a rubber chicken, which he then used to erase the board. Though we were not introduced
+        until later, this scene sticks out in my mind as an encapsulation of Tyler's personality. I
+        have no reservations around him and have always felt comfortable being my true, weird self.
+        We were inseparable throughout high school and now refuse to let time pull us apart. More
+        like a brother to me than a friend, I consider myself very lucky to have Tyler as one of my
+        groomsmen.</p>
+    <p id="brian-bio" class="bio-text" data-full-name="Brian Beaulieu" data-title="Groomsman">
+        One of my oldest and closest friends, Brian and I have been best buds from the start. We met
+        in French class in our freshman year of high school and became immediate friends the
+        following year. We bonded over our love for Celine Dion and creating elaborate fictional
+        tales. Brian introduced me to ultimate which helped me come out of my shell. Along with
+        Tyler, Brian and I spent many summers just being silly, carefree kids. He is one of the most
+        hard working people I have ever met, yet he is still the fun-loving kid I have always known.
+        No matter how long we go without seeing each other it feels like it was just yesterday. I'm
+        honored to call Brian a groomsman and one of my best friends.</p>
+    <p id="jan-bio" class="bio-text" data-full-name="Jan Wojtasinski" data-title="Groomsman">I
+        first met my future brother-in-law and fellow goof-ball, Jan, at UNH. He was dating Emma's
+        sister, now his wife, Rachel. From the start I knew Jan and I would get along. He is smart,
+        determined, and sometimes very serious -- and those aren't even all the things we have in
+        common! Jan has an adventure streak a mile wide and knows how to get the most out of life.
+        He always does his research and his charming nature gets him the best deals on everything
+        from gear, to flights, to limousines in Las Vegas. Though Jan is usually generous and
+        caring, when there is a board game involved all bets are off! I'm really glad to have Jan as
+        a friend, groomsman, and soon-to-be brother.</p>
+    <p id="jake-bio" class="bio-text" data-full-name="Jake Schwartz" data-title="Groomsman">Out
+        of all the friends I made in college, Jake sticks out as one of the best. Though he is
+        actually younger than me, I have often looked up to him -- in a figurative sense. We share
+        many passions: software development, ultimate frisbee, fantasy football, burritos... It is
+        no wonder at all how we became such close friends. His sense of humor and laugh are
+        infectious and could bring someone out of the worst of moods. Living with him in college
+        allowed me to see just how great of a person Jake is. He is always willing to listen and
+        lend a hand when needed. All of these things made Jake an easy choice for me, and I am happy
+        to have him as part of my wedding.</p>
+    <p id="eric-bio" class="bio-text" data-full-name="Eric Lecours" data-title="Groomsman">I
+        have known Eric since elementary school, though we didn't become good friends until the
+        middle of high school when we played ultimate together. Together we have been described by
+        others as "loud" or "boisterous" or "the worst two people to have a discussion with in an
+        enclosed space". In the latter half of high school I spent many summer days doing flips into
+        Eric's pool or on his trampoline. From sports, to cards, to getting in trouble, our shared
+        interests made our friendship grow like a weed. Many people aren't lucky enough to have one
+        close friend from high school, but along with Brian and Tyler I feel privileged to have
+        three as my groomsmen.</p>
+    <p id="brady-bio" class="bio-text" data-full-name="Brady Page" data-title="Groomsman">
+        Easily one of the funniest people I have ever known, Brady and I have been close ever since
+        he burst onto the UNH Ultimate scene. We bonded over long car rides to creepy motels,
+        jumping on beds, and cooking dinner for an entire Ultimate team. Brady introduced me to the
+        finer things in life like Tim and Eric, belly drumming, the RIGHT way to play Guesstures,
+        and of course Beezer. Having him as my captain for years, I have seen the best that Brady
+        has to offer. He is organized, dependable, but most of all he knows how to have a good time.
+        I strive to be as care-free as he is able to be. When it came time to pick out my groomsmen,
+        Brady was an easy choice.</p>
+    
+    <p id="dan-bio" class="bio-text" data-full-name="Daniel Del Tufo" data-title="">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non porttitor magna, id
+        ultricies dolor. Donec sodales lorem non enim pretium laoreet et non enim. Nam volutpat
+        vehicula rutrum. Duis risus purus, aliquam id lorem sodales, porttitor porttitor neque.
+        Donec condimentum tortor ac elit scelerisque, quis tristique orci faucibus. Proin ac
+        suscipit magna, eu faucibus eros. Donec tincidunt, nunc vel fringilla fringilla, massa magna
+        egestas nisl, sed efficitur odio metus a tortor. Proin diam tortor, finibus eu orci quis,
+        porta dignissim eros. Curabitur vel blandit nisl, nec condimentum arcu.</p>
+    <p id="lydia-bio" class="bio-text" data-full-name="Lydia McLaughlin" data-title="">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non porttitor magna, id
+        ultricies dolor. Donec sodales lorem non enim pretium laoreet et non enim. Nam volutpat
+        vehicula rutrum. Duis risus purus, aliquam id lorem sodales, porttitor porttitor neque.
+        Donec condimentum tortor ac elit scelerisque, quis tristique orci faucibus. Proin ac
+        suscipit magna, eu faucibus eros. Donec tincidunt, nunc vel fringilla fringilla, massa magna
+        egestas nisl, sed efficitur odio metus a tortor. Proin diam tortor, finibus eu orci quis,
+        porta dignissim eros. Curabitur vel blandit nisl, nec condimentum arcu.</p>
 </body>
 </html>
